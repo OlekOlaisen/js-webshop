@@ -8,12 +8,13 @@ body {
 
 h1 {
 	color: var(--forground);
-	font-size: 3rem;
+	font-size: var(--font-size-large);
 	font-family: 'Bitter', serif;
 }
 
 h2 {
 	font-family: 'Taviraj', serif;
+	font-size: var(--font-size-medium);
 }
 
 p {
@@ -22,6 +23,7 @@ p {
 
 a {
 	font-family: 'Biryani', sans-serif;
+	font-size: var(--font-size-small);
 	color: var(--background);
 	text-decoration: none;
 }

@@ -7,6 +7,7 @@
 	background-color: var(--forground);
 	position: fixed;
 	top: 0;
+	z-index: 1;
 }
 
 .header__logo-miniature {
