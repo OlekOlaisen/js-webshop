@@ -1,0 +1,27 @@
+html {
+	font-size: 20px;
+}
+
+body {
+	background-color: var(--background);
+}
+
+h1 {
+	color: var(--forground);
+	font-size: 3rem;
+	font-family: 'Bitter', serif;
+}
+
+h2 {
+	font-family: 'Taviraj', serif;
+}
+
+p {
+	font-family: 'Biryani', sans-serif;
+}
+
+a {
+	font-family: 'Biryani', sans-serif;
+	color: var(--background);
+	text-decoration: none;
+}

@@ -1,0 +1,38 @@
+.header__navigation-primary {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	height: 75px;
+	width: 100%;
+	background-color: var(--forground);
+	position: fixed;
+	top: 0;
+}
+
+.header__logo-miniature {
+	display: block;
+}
+
+.header__logo-name {
+	display:none;
+	
+	margin-left: 1rem;
+}
+
+ul {
+	display: flex;
+	direction: row;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	width: 400px;
+}
+
+li {
+	list-style: none;
+	color: var(--background);
+	font-size: var(--font-size-small);
+	font-weight: 500;
+	align-content: center;
+}

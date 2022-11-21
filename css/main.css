@@ -1,0 +1,13 @@
+/**********FONT IMPORTS**********/
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@300&family=Bitter:wght@700&family=Taviraj:wght@200&display=swap');
+
+
+/* *********GENERAL STYLES********* */
+@import './reset.css';
+@import './variables.css';
+@import './base.css';
+
+/**********MODULE STYLES**********/
+@import './modules/header-primary.css';
+@import './modules/header-secondary.css';
+@import './modules/main-grid.css';
