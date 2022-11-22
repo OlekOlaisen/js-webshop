@@ -8,6 +8,7 @@
 @import './base.css';
 
 /**********MODULE STYLES**********/
-@import './modules/header-primary.css';
-@import './modules/header-secondary.css';
+@import './modules/header.css';
+@import './modules/filterNav.css';
 @import './modules/main-grid.css';
+@import './modules/filterItems.css';

@@ -1,13 +1,14 @@
 .header__navigation-primary {
 	display: flex;
 	flex-flow: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	height: 75px;
 	width: 100%;
 	background-color: var(--forground);
 	position: fixed;
 	top: 0;
 	z-index: 1;
+	padding: 0 2rem;
 }
 
 .header__logo-miniature {
@@ -15,9 +16,9 @@
 }
 
 .header__logo-name {
-	display:none;
-	
+	display: none;
 	margin-left: 1rem;
+
 }
 
 ul {
