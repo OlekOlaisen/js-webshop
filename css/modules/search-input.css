@@ -1,0 +1,16 @@
+.header__input-filter {
+	border-radius: 1rem;
+	width: 300px;
+	height: 30px;
+	border: none;
+	padding: 1rem;
+}
+
+.header__input-filter:focus {
+	outline: none;
+	
+}
+
+.header__input-filter::placeholder {
+	margin-left: 1rem;
+}

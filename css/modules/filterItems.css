@@ -1,13 +1,13 @@
 .filter__image-container {
-   margin: 1rem;
+  
 }
 
 .filter__info-container {
    display: flex;
    flex-flow: column;
    align-items: center;
-   justify-items: end;
-   padding: 2rem;
+   justify-content: end;
+   height: 250px;
 }
 
 
@@ -20,6 +20,10 @@
 .filter__toggle--active {
    border-right: 1px solid black;
    border-left: 1px solid black;
+   font-weight: 600;
+   font-size: 1.2rem;
+   transition: ease 200ms;
+
 }
 
 
@@ -27,6 +31,9 @@
 
 .item__name {
    font-family: 'Taviraj', serif;
+   margin: 1rem 0;
+   justify-self: center;
+   
 
 }
 
@@ -40,3 +47,13 @@
    font-family: 'Bitter', serif;
    font-size: var(--font-size-large);
 }
+
+.item__purchase {
+   padding: 0.5rem 1rem;
+   background-color: var(--forground);
+   border-radius: 1rem;
+   margin: 1rem;
+   color: white;
+   font-family: 'Biryani', sans-serif;
+}
+
