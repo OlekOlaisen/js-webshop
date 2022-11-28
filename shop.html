@@ -16,8 +16,8 @@
 			<img class="header__logo-name" src="./assets/images/logo-name.png" alt="logo name (liquor store)">
 			<img class="header__logo-miniature" src="./assets/images/logo-miniature.png" alt="drawing of liquor">
 			<ul>
-				<li><a class="header__navigation-link--active" href="./index.html">Home</a></li>
-				<li><a href="./shop.html">Shop</a></li>
+				<li><a href="./index.html">Home</a></li>
+				<li><a class="header__navigation-link--active" href="./shop.html">Shop</a></li>
 				<li><a href="./index.html">Contact</a></li>
 				<li><a href="./index.html">About</a></li>
 			</ul>
@@ -25,13 +25,28 @@
 			<img src="./assets/images/shopping-cart.svg" class="header__cart"></img>
 		</nav>
 
-<main>
-	<section class="banner__container">
-		<div class="banner__banner"><p class="banner__banner-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p></div>
-	</section>
-</main>
+		<menu class="filter">
 
-	
+			<button class="filter__toggle" data-filter="Top selling">Top selling</button>
+			<button class="filter__toggle" data-filter="Red wine">Red Wine</button>
+			<button class="filter__toggle" data-filter="White wine">White Wine</button>
+			<button class="filter__toggle" data-filter="Rosé wine">Rosé Wine</button>
+			<button class="filter__toggle" data-filter="Beer">Beer</button>
+			<button class="filter__toggle" data-filter="Liquor">Liquor</button>
+
+		</menu>
+	</header>
+
+	<main class="main">
+
+		<section class="grid">
+
+			<div class="grid__filter-content">
+
+			</div>
+
+		</section>
+	</main>
 </body>
 
 </html>

@@ -26,8 +26,17 @@
 
 }
 
+.item__label {
+   font-size: var(--font-size-small); 
+   height: 1.2rem;
+   width: 4rem;
+   color: var(--forground);
+   text-align: center;
+   text-decoration: underline;
+   font-family: 'Biryani', sans-serif;
+   
+}
 
-.item__image {}
 
 .item__name {
    font-family: 'Taviraj', serif;
