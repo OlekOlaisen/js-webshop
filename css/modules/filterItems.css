@@ -13,9 +13,9 @@
 
 .filter__item {
    text-align: center;
-
-
 }
+
+
 
 .filter__toggle--active {
    border-right: 1px solid black;
@@ -34,8 +34,9 @@
    text-align: center;
    text-decoration: underline;
    font-family: 'Biryani', sans-serif;
-   
 }
+
+
 
 
 .item__name {
@@ -64,5 +65,11 @@
    margin: 1rem;
    color: white;
    font-family: 'Biryani', sans-serif;
+}
+
+.item__purchase:hover {
+   background-color: #504564;
+   transition: ease 100ms;
+   transform: scale(1.05)
 }
 

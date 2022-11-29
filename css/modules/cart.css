@@ -1,0 +1,24 @@
+.header__cart-accordion {
+	display: none;
+}
+
+.header__cart-accordion--visible {
+	display: block;
+	height: 400px;
+	width: 400px;
+	background: white;
+	position: fixed;
+	top: 75px;
+	right: 0;
+	border: 1px solid grey;
+	transition: ease 300ms;
+}
+
+.header__cart-button {
+	color: white;
+	cursor: pointer;
+}
+
+.header__cart {
+	position: relative;
+}

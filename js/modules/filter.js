@@ -10,7 +10,7 @@ const filterObjects = [
    {
       id: '2',
       name: 'Jackson Vintage Widow Pinot Noir 2017',
-      category: 'Top selling',
+      category: 'Red wine',
       image: 'https://bilder.vinmonopolet.no/cache/300x300-0/5072301-1.jpg',
       price: '$23',
       label: 'Top seller'
@@ -270,7 +270,7 @@ export default function Filter() {
          return filterObjects;
       }
       else {
-         return filterObjects.filter(item => item.category === currentFilter);
+         return filterObjects.filter(item => item.category  === currentFilter);
       }
    }
 
@@ -294,14 +294,14 @@ export default function Filter() {
          filterItem.className = 'filter__item';
          filterItem.innerHTML = `
          <div class="filter__image-container">
-            <div class="item__label">${item.label}</div>
+            <div class="item__label">${item.label} </div>
             <img class="item__image" src="${item.image}">
          </div>
          <div class="filter__info-container">
             <div class="item__name">${item.name}</div>
             <div class="item__category">${item.category}</div>
             <div class="item__price">${item.price}</div>
-            <button class="item__purchase">Add to cart</button>
+            <button class="item__purchase tiny">Add to cart</button>
          </div>
          `
 
