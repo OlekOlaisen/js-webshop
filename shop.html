@@ -12,22 +12,24 @@
 
 <body>
 	<header class="header">
-		<nav class="header__navigation-primary">
+		<nav class="header__navigation">
 			<img class="header__logo-name" src="./assets/images/logo-name.png" alt="logo name (liquor store)">
 			<img class="header__logo-miniature" src="./assets/images/logo-miniature.png" alt="drawing of liquor">
 			<ul>
 				<li><a href="./index.html">Home</a></li>
-				<li><a class="header__navigation-link--active" href="./shop.html">Shop</a></li>
+				<li><a class="header__navigation-link--active" href="./shop1.html">Shop</a></li>
 				<li><a href="./index.html">Contact</a></li>
 				<li><a href="./index.html">About</a></li>
 			</ul>
 			<input class="header__input-filter" type="text" placeholder="Search...">
 			<section class="header__cart">
-
-				<button class="header__cart-button"><img src="./assets/images/shopping-cart.svg" ></img></button>
-			<div class="header__cart-accordion">
+				<div class="header__cart-button">
+					<button class="header__cart-icon"><i class="bi bi-cart2"></i></button>
+					<div id="cartQuantity" class="header__cart-quantity">0</div>
+				</div>
+				<div class="header__cart-accordion">
 					<h1>Cart items</h1>
-		</div>
+				</div>
 			</section>
 		</nav>
 
@@ -42,18 +44,20 @@
 	</header>
 
 	<main class="main">
-		
+
 
 		<section class="grid">
 
-			<div class="grid__filter-content">
+			<div class="grid__filter-content" id="shop">
 
 			</div>
 
 		</section>
 
-		
+
 	</main>
+
+	<script src="./js/modules/shop.js"></script>
 </body>
 
 </html>

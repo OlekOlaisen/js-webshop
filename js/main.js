@@ -1,6 +1,6 @@
-import Filter from './modules/filter.js';
 import Cart from './modules/cart.js'
+import Amount from './modules/amount-buttons.js';
 
 
-Filter();
+Amount();
 Cart();

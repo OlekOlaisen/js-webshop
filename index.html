@@ -5,19 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
-	<script type="module" src="./js/index.js"></script>
 
 	<title>JS-Webshop</title>
 </head>
 
 <body>
 	<header class="header">
-		<nav class="header__navigation-primary">
+		<nav class="header__navigation">
 			<img class="header__logo-name" src="./assets/images/logo-name.png" alt="logo name (liquor store)">
 			<img class="header__logo-miniature" src="./assets/images/logo-miniature.png" alt="drawing of liquor">
 			<ul>
 				<li><a class="header__navigation-link--active" href="./index.html">Home</a></li>
-				<li><a href="./shop.html">Shop</a></li>
+				<li><a href="./shop1.html">Shop</a></li>
 				<li><a href="./index.html">Contact</a></li>
 				<li><a href="./index.html">About</a></li>
 			</ul>
@@ -25,23 +24,26 @@
 
 			<section class="header__cart">
 
-				<button class="header__cart-button"><img src="./assets/images/shopping-cart.svg" ></img></button>
+				<button class="header__cart-icon"><i class="bi bi-cart2"></i></button>
+				<div id="cartQuantity" class="header__cart-quantity">0</div>
 			</section>
-			
+
 		</nav>
-			<div class="header__cart-accordion">
-					<h1>Cart items</h1>
+		<div class="header__cart-accordion">
+			<h1>Cart items</h1>
 		</div>
 	</header>
 
-<main>
-	
-	<section class="banner__container">
-		<div class="banner__banner"><p class="banner__banner-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p></div>
-	</section>
-</main>
+	<main>
 
-	
+		<section class="banner__container">
+			<div class="banner__banner">
+				<p class="banner__banner-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+			</div>
+		</section>
+	</main>
+
+	<script src="./js/modules/shop.js"></script>
 </body>
 
 </html>

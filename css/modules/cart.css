@@ -14,11 +14,30 @@
 	transition: ease 300ms;
 }
 
-.header__cart-button {
+.header__cart-icon {
 	color: white;
 	cursor: pointer;
+	font-size: 1.5rem;
 }
 
 .header__cart {
 	position: relative;
+
+}
+
+.header__cart-button {
+	color: black;
+
+}
+
+.header__cart-quantity {
+	font-size: var(--font-size-small);
+	background-color: red;
+	color: white;
+	position: absolute;
+	border-radius: 3px;
+	padding: 3px;
+	top: -8px;
+	right: -5px;
+	cursor: pointer;
 }

@@ -1,4 +1,4 @@
-.header__navigation-primary {
+.header__navigation {
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
@@ -22,8 +22,9 @@
 	margin-left: 1rem;
 }
 
+
+
 .header__navigation-link--active {
-	
 	border-bottom: 1px solid white;
 }
 
@@ -44,4 +45,3 @@ li {
 	font-weight: 500;
 	align-content: center;
 }
-

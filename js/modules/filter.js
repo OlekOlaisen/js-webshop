@@ -242,10 +242,12 @@ const filterObjects = [
 ];
 
 export default function Filter() {
+
    let currentFilter = null;
 
    const filterContent = document.querySelector('.grid__filter-content');
    const filterToggles = document.querySelectorAll('.filter__toggle');
+
 
    for (const toggle of filterToggles) {
       toggle.addEventListener('click', handleFilterToggleClick);
@@ -254,6 +256,7 @@ export default function Filter() {
    function handleFilterToggleClick(event) {
       toggleFilter(event.target.dataset.filter);
       renderHTML();
+
    }
 
    function toggleFilter(filter) {
@@ -270,11 +273,13 @@ export default function Filter() {
          return filterObjects;
       }
       else {
-         return filterObjects.filter(item => item.category  === currentFilter);
+         return filterObjects.filter(item => item.category === currentFilter);
       }
    }
 
    renderHTML();
+
+
 
    function renderHTML() {
       filterContent.innerHTML = '';
@@ -290,22 +295,36 @@ export default function Filter() {
       for (const item of returnFilteredItems()) {
          const filterItem = document.createElement('div');
 
+
          filterItem.dataset.category = item.category;
          filterItem.className = 'filter__item';
+         filterItem.id = `${item.id}`
          filterItem.innerHTML = `
+      <div class="filter__container">
          <div class="filter__image-container">
-            <div class="item__label">${item.label} </div>
+            <div class="item__label">${item.label}</div>
             <img class="item__image" src="${item.image}">
          </div>
          <div class="filter__info-container">
             <div class="item__name">${item.name}</div>
             <div class="item__category">${item.category}</div>
             <div class="item__price">${item.price}</div>
-            <button class="item__purchase tiny">Add to cart</button>
+           
+            <div class="item__amount">
+               <i id="decrement" class="bi bi-dash"></i>
+               <div id=${item.id} class="item__quantity">0</div>
+               <i onclick="increment(${item.id})" class="bi bi-plus"></i>
+            </div>
          </div>
+      </div>   
          `
-
          filterContent.appendChild(filterItem);
       }
    }
+
+   let increment = () => {
+      console.log('increment');
+   }
+
 }
+
