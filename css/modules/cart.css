@@ -3,10 +3,14 @@
 }
 
 .header__cart-accordion--visible {
-	display: block;
-	height: 400px;
+	display: grid;
+	grid-template-columns: repeat(1, 320px);
 	width: 400px;
-	background: white;
+	height: 700px;
+	justify-content: center;
+	overflow: auto;
+	background-color: var(--background);
+	box-shadow: 10px 5px 5px gray;
 	position: fixed;
 	top: 75px;
 	right: 0;
@@ -40,4 +44,85 @@
 	top: -8px;
 	right: -5px;
 	cursor: pointer;
+}
+
+#cart__empty-image {
+	font-size: 5rem;
+}
+
+#header__cart-list-item-x {
+	color: red;
+}
+
+.header__cart-headline {
+	text-align: center;
+	margin: 1rem;
+}
+
+.header__cart-list {
+	display: flex;
+	flex-flow: column;
+}
+
+.header__cart-list-item {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-evenly;
+	border-bottom: 1px solid lightgrey;
+	padding: 1rem;
+	margin-bottom: 3rem;
+}
+
+.header__cart-list-item-details {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.header__cart-list-item-name-x {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.header__cart-list-item-image {
+	width: 50px;
+	margin: 0 0.5rem;
+}
+
+.header__cart-list-item-name {
+	font-family: 'Taviraj', serif;
+	font-size: 0.8rem;
+}
+
+.header__cart-list-item-price {
+	text-align: end;
+	font-family: 'Bitter', serif;
+}
+
+.header__cart-list-item-price-buttons {
+
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.header__cart-list-item-amount {
+	display: flex;
+	flex-flow: row;
+}
+
+.header__cart-list-options {
+	width: 100%;
+	position: sticky;
+	bottom: 0;
+
+}
+
+.header__cart-list-total {
+	font-weight: bold;
+	text-align: end;
 }

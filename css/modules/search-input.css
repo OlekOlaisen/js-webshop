@@ -1,4 +1,4 @@
-.header__input-filter {
+.header__search {
 	border-radius: 1rem;
 	width: 300px;
 	height: 30px;
@@ -6,11 +6,11 @@
 	padding: 1rem;
 }
 
-.header__input-filter:focus {
+.header__search:focus {
 	outline: none;
 	
 }
 
-.header__input-filter::placeholder {
+.header__search::placeholder {
 	margin-left: 1rem;
 }

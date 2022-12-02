@@ -65,7 +65,7 @@
 .item__amount {
    display: flex;
    flex-flow: row;
-   justify-content: space-evenly;
+   justify-content: center;
    align-items: center;
    width: 100%;
    margin: 0.5rem;
