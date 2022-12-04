@@ -3,6 +3,7 @@ export default function Cart() {
 	let shoppingList = document.getElementById('cart-list');
 
 
+
 	// Gets items from localstorage
 	let cart = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -13,8 +14,9 @@ export default function Cart() {
 
 	calculation();
 
-	// Generates items in cart
 
+
+	// Generates items in cart
 	let generateCartItems = () => {
 
 		if (cart.length !== 0) {
@@ -24,7 +26,7 @@ export default function Cart() {
 
 				let { id, item } = x;
 
-				let search = shopItemsData.find((item) => item.id == id) || [];
+				let search = filterObjects.find((item) => item.id == id) || [];
 
 				return `
 				
@@ -117,26 +119,27 @@ export default function Cart() {
 
 	let removeItem = (id) => {
 		let selectedItem = id;
-		cart = basket.filter((x) => x.id !== selectedItem.id);
+		cart = cart.filter((x) => x.id !== selectedItem.id);
 		localStorage.setItem("data", JSON.stringify(cart));
-
+		removeItem();
 	}
 
 	let totalAmount = () => {
 		if (cart.length !== 0) {
 			let amount = cart.map((x) => {
 				let { item, id } = x;
-				let search = shopItemsData.find((item) => item.id == id) || [];
+				let search = filterObjects.find((item) => item.id == id) || [];
 				return item * search.price;
 			}).reduce((x, y) => x + y, 0);
 			// console.log(amount);
 			label.innerHTML = `
 			
 			<div class="header__cart-list-options">
-					<div class="header__cart-list-options-"></div>
+					<div class="header__cart-list-options-x"></div>
 					<div class="header__cart-list-total">Total bill: $${amount}</div>
-				</div>
+			</div>
 			`
+
 		} else return;
 	}
 
@@ -177,6 +180,7 @@ export default function Cart() {
 
 		}
 	}
+
 
 }
 

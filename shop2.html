@@ -5,20 +5,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
-
 	<script type="module" src="./js/main.js"></script>
 
-	<title>Shop</title>
+	<title>JS-Webshop</title>
 </head>
 
 <body>
 	<header class="header">
 		<nav class="header__navigation">
-
+			<img class="header__logo-name" src="./assets/images/logo-name.png" alt="logo name (liquor store)">
 			<img class="header__logo-miniature" src="./assets/images/logo-miniature.png" alt="drawing of liquor">
 			<ul>
-				<li><a class="header__navigation-link--active" href="./index.html">Home</a></li>
-				<li><a href="./shop.html">Shop</a></li>
+				<li><a href="./index.html">Home</a></li>
+				<li><a class="header__navigation-link--active" href="./shop.html">Shop</a></li>
 				<li><a href="./index.html">Contact</a></li>
 				<li><a href="./index.html">About</a></li>
 			</ul>
@@ -29,33 +28,36 @@
 					<div id="cartQuantity" class="header__cart-quantity">0</div>
 				</div>
 				<div class="header__cart-accordion">
-					<h1 class="header__cart-headline">Cart items</h1>
-					<div class="header__cart-list" id="cart-list"></div>
-					<div class="header__cart-options" id="label"></div>
+					<h1>Cart items</h1>
 				</div>
 			</section>
 		</nav>
 
+		<menu class="filter">
 
+			<button class="filter__toggle" data-filter="Red wine">Red Wine</button>
+			<button class="filter__toggle" data-filter="White wine">White Wine</button>
+			<button class="filter__toggle" data-filter="Rosé wine">Rosé Wine</button>
+			<button class="filter__toggle" data-filter="Beer">Beer</button>
+			<button class="filter__toggle" data-filter="Liquor">Liquor</button>
+		</menu>
 	</header>
 
 	<main class="main">
 
 
-		<section class="banner__container">
-			<div class="banner__banner">
-				<p class="banner__banner-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+		<section class="grid">
+
+			<div class="grid__filter-content" id="shop">
+
 			</div>
+
 		</section>
 
 
 	</main>
 
-	<!-- Could not get it to work with modules, so it's placed here  -->
-
 	<script src="./js/modules/shop.js"></script>
-
-
 </body>
 
 </html>
