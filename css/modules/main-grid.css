@@ -1,4 +1,4 @@
-.grid__filter-content {
+.product__filter-content {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	margin: 4rem 5rem;

@@ -229,7 +229,7 @@ const filterObjects = [
       category: 'Liquor',
       image: 'https://bilder.vinmonopolet.no/cache/300x300-0/1472301-1.jpg',
       price: '35',
-      label: 'Top seller'
+      label: ''
    },
    {
       id: '30',
@@ -247,9 +247,12 @@ let cart = JSON.parse(localStorage.getItem("data")) || [];
 let currentFilter = null;
 
 
-const filterContent = document.querySelector('.grid__filter-content');
+const filterContent = document.querySelector('.product__filter-content');
 const filterToggles = document.querySelectorAll('.filter__toggle');
-/* let incrementButton = document.getElementById('item__increment');
+/* 
+I'm aware that onclick functions are not up to wc3 standards, but couldn't get increment and decrement to work with event listeners.
+* 
+let incrementButton = document.getElementById('item__increment');
 let decrementButton = document.getElementById('item__decrement');
 
 incrementButton.addEventListener('click', handleIncrementClick);
@@ -262,6 +265,8 @@ function handleIncrementClick() {
 function handleDecrementClick() {
    decrement();
 } */
+
+
 
 
 for (const toggle of filterToggles) {
@@ -318,7 +323,8 @@ function renderHTML() {
 
       filterItem.dataset.category = item.category;
       filterItem.innerHTML = `
-      <div id=item__id-${id} class="grid__filter-item">
+      
+      <div id=item__id-${id} class="product__filter-item">
             <div class="item__label">${label}</div>
             <img class="item__image" src="${image}">
             <div class="filter__info-container">

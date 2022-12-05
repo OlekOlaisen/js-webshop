@@ -18,7 +18,7 @@ let generateShop = () => {
          let search = cart.find((item) => item.id == id) || [];
 
          return `
-         <div id=item__id-${id} class="grid__filter-item">
+         <div id=item__id-${id} class="product__filter-item">
             <div class="item__label">${label}</div>
             <img class="item__image" src="${image}">
             <div class="filter__info-container">
