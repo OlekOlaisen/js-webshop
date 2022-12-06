@@ -1,6 +1,6 @@
 :root {
 	/* Colors */
-	--forground: #1b1722;
+	--foreground: #1b1722;
 	--background: #ffffff;
 
 	/* Fonts */
@@ -8,13 +8,3 @@
 	--font-size-medium: 1rem;
 	--font-size-small: 0.7rem;
 }
-
-/*     
-
-font-family: 'Bitter', serif;  -- Large
-
-font-family: 'Taviraj', serif; -- Medium
-
-font-family: 'Biryani', sans-serif;  --Small
-
-	 */

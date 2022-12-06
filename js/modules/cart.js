@@ -7,12 +7,12 @@ export default function Cart() {
 	// Gets items from localstorage
 	let cart = JSON.parse(localStorage.getItem("data")) || [];
 
-	let calculation = () => {
+	let calculateNumbers = () => {
 		let cartIcon = document.getElementById('cartQuantity')
 		cartIcon.innerHTML = cart.map((x) => x.item).reduce((x, y) => x + y, 0)
 	}
 
-	calculation();
+	calculateNumbers();
 
 
 
@@ -40,9 +40,9 @@ export default function Cart() {
 								
 						<div class="header__cart-list-item-price-buttons">	
 							<div class="header__cart-list-item-amount">
-								<i onclick="decrement(${id})" class="bi bi-dash"></i>
+								<i onclick="decrementItems(${id})" class="bi bi-dash"></i>
 								<div id=${id} class="header__cart-list-item-quantity">${item}</div>
-								<i onclick="increment(${id})" class="bi bi-plus"></i>
+								<i onclick="incrementItems(${id})" class="bi bi-plus"></i>
 								</div>
 								<div class="header__cart-list-item-price">$${item * search.price}</div>		
 						</div>
@@ -67,8 +67,8 @@ export default function Cart() {
 
 	generateCartItems();
 
-	// Increments amount of items on each id. 
-	let increment = (id) => {
+	// incrementItemss amount of items on each id. 
+	let incrementItems = (id) => {
 		let selectedItem = id;
 		let search = cart.find((items) => items.id === selectedItem);
 
@@ -83,14 +83,14 @@ export default function Cart() {
 		}
 
 		generateCartItems();
-		update(selectedItem);
+		updateItems(selectedItem);
 
 		//  Adding cart to localStorage
 		localStorage.setItem("data", JSON.stringify(cart));
 	};
 
-	// Decrements amount of items on each id, stops at 0. 
-	let decrement = (id) => {
+	// decrementItemss amount of items on each id, stops at 0. 
+	let decrementItems = (id) => {
 		let selectedItem = id;
 		let search = cart.find((items) => items.id === selectedItem);
 
@@ -99,7 +99,7 @@ export default function Cart() {
 		else {
 			search.item -= 1;
 		}
-		update(selectedItem);
+		updateItems(selectedItem);
 		// Removes items with 0 quantity from cart 
 		cart = cart.filter((x) => x.item !== 0);
 		generateCartItems();
@@ -108,13 +108,13 @@ export default function Cart() {
 	};
 
 
-	// Updates item__quantity and displays it on it in HTML. 
-	let update = (id) => {
+	// updateItemss item__quantity and displays it on it in HTML. 
+	let updateItems = (id) => {
 
 		let search = cart.find((items) => items.id === id)
 		// console.log(search.item);
 		document.getElementById(id).innerHTML = search.item;
-		calculation();
+		calculateNumbers();
 	}
 
 	let removeItem = (id) => {

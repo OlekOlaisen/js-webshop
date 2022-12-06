@@ -26,7 +26,7 @@
    font-size: var(--font-size-small);
    height: 1.2rem;
    width: 4rem;
-   color: var(--forground);
+   color: var(--foreground);
    text-align: center;
    text-decoration: underline;
    font-family: 'Biryani', sans-serif;
@@ -55,7 +55,7 @@
 
 .item__purchase {
    padding: 0.5rem 1rem;
-   background-color: var(--forground);
+   background-color: var(--foreground);
    border-radius: 1rem;
    margin: 1rem;
    color: white;

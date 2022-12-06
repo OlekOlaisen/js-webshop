@@ -1,7 +1,7 @@
 .main__section-hero {
 	height: 100vh;
-background: rgb(27,23,34);
-background: linear-gradient(180deg, rgba(27,23,34,1) 20%, rgba(108,22,42,1) 50%, rgba(195,20,50,1) 100%);
+	background: rgb(27, 23, 34);
+	background: linear-gradient(180deg, rgba(27, 23, 34, 1) 20%, rgba(108, 22, 42, 1) 50%, rgba(195, 20, 50, 1) 100%);
 	background-repeat: no-repeat;
 	position: relative;
 }
@@ -30,7 +30,7 @@ background: linear-gradient(180deg, rgba(27,23,34,1) 20%, rgba(108,22,42,1) 50%,
 
 .main__section-hero-link {
 	padding: 1rem 2rem;
-	background-color: var(--forground);
+	background-color: var(--foreground);
 	position: fixed;
 	bottom: 1rem;
 	left: 50%;

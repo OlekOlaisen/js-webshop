@@ -1,9 +1,7 @@
-import Searchbar from './modules/search.js';
+/**********MODULE IMPORTS**********/
+
 import Cart from './modules/cart.js';
 
-
-
-
 Cart();
-Searchbar();
+
 

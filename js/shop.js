@@ -1,3 +1,5 @@
+
+
 const filterObjects = [
    {
       id: '1',
@@ -250,23 +252,8 @@ let currentFilter = null;
 const filterContent = document.querySelector('.product__filter-content');
 const filterToggles = document.querySelectorAll('.filter__toggle');
 /* 
-I'm aware that onclick functions are not up to wc3 standards, but couldn't get increment and decrement to work with event listeners.
-* 
-let incrementButton = document.getElementById('item__increment');
-let decrementButton = document.getElementById('item__decrement');
-
-incrementButton.addEventListener('click', handleIncrementClick);
-decrementButton.addEventListener('click', handleDecrementClick);
-
-function handleIncrementClick() {
-   increment();
-}
-
-function handleDecrementClick() {
-   decrement();
-} */
-
-
+I'm aware that onclick functions are not up to wc3 standards, but I couldn't get increment and decrement to work with event listeners.
+*/
 
 
 for (const toggle of filterToggles) {
@@ -332,9 +319,9 @@ function renderHTML() {
                <div class="item__category">${category}</div>
                <div class="item__price">$${price}</div>
                <div class="item__amount">
-                  <i onclick="decrement(${id})" id="item__decrement" class="bi bi-dash"></i>
+                  <i onclick="decrementItems(${id})" id="item__decrementItems" class="bi bi-dash"></i>
                   <div id=${id} class="item__quantity">${search.item === undefined ? 0 : search.item}</div>
-                  <i onclick="increment(${id})" id="item__increment" class="bi bi-plus"></i>
+                  <i onclick="incrementItems(${id})" id="item__incrementItems" class="bi bi-plus"></i>
                </div>
             </div>
          </div>
@@ -343,9 +330,9 @@ function renderHTML() {
    }
 }
 
-// Increments amount of items on each id. 
+// incrementItemss amount of items on each id. 
 /* function expression/declaration */
-let increment = (id) => {
+let incrementItems = (id) => {
    let selectedItem = id;
    let search = cart.find((items) => items.id === selectedItem);
 
@@ -359,14 +346,14 @@ let increment = (id) => {
       search.item += 1;
    }
 
-   update(selectedItem);
+   updateItems(selectedItem);
 
    //  Adding cart to localStorage
    localStorage.setItem("data", JSON.stringify(cart));
 };
 
-// Decrements amount of items on each id, stops at 0. 
-let decrement = (id) => {
+// decrementItemss amount of items on each id, stops at 0. 
+let decrementItems = (id) => {
    let selectedItem = id;
    let search = cart.find((items) => items.id === selectedItem);
 
@@ -376,7 +363,7 @@ let decrement = (id) => {
       search.item -= 1;
    }
 
-   update(selectedItem);
+   updateItems(selectedItem);
 
    // Removes items with 0 quantity from cart 
    cart = cart.filter((x) => x.item !== 0);
@@ -386,22 +373,22 @@ let decrement = (id) => {
 };
 
 
-// Updates item__quantity and displays it on it in HTML. 
-let update = (id) => {
+// updateItemss item__quantity and displays it on it in HTML. 
+let updateItems = (id) => {
 
    let search = cart.find((items) => items.id === id)
    // console.log(search.item);
    document.getElementById(id).innerHTML = search.item;
-   calculation();
+   calculateNumbers();
 }
 
-//  Calculates all the numbers and displays it on shopping cart icon, only runs when update function is triggered
-let calculation = () => {
+//  Calculates all the numbers and displays it on shopping cart icon, only runs when updateItems function is triggered
+let calculateNumbers = () => {
    let cartIcon = document.getElementById('cartQuantity')
    cartIcon.innerHTML = cart.map((x) => x.item).reduce((x, y) => x + y, 0)
 }
 
-calculation();
+calculateNumbers();
 
 
 

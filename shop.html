@@ -5,22 +5,21 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./css/main.css">
-
    <script type="module" src="./js/main.js"></script>
-
    <title>Shop</title>
 </head>
 
 <body>
    <header class="header">
       <nav class="header__navigation">
-         <img class="header__logo-miniature" src="./assets/images/logo-miniature.png" alt="drawing of liquor">
+         <img class="header__navigation-logo" src="./assets/images/logo-miniature.png" alt="drawing of liquor">
          <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a class="header__navigation-link--active" href="./shop.html">Shop</a></li>
             <li><a href="./index.html">Contact</a></li>
             <li><a href="./index.html">About</a></li>
          </ul>
+
          <section class="header__cart">
             <div class="header__cart-button">
                <button class="header__cart-icon"><i class="bi bi-cart2"></i></button>
@@ -47,18 +46,12 @@
 
 
       <section class="product">
-
-         <div class="product__filter-content" id="shop">
-
-         </div>
-
+         <div class="product__filter-content" id="shop"></div>
       </section>
-
-
    </main>
 
    <!-- Could not get it to work with modules, so it's placed here  -->
-   <script src="./js/modules/shop.js"></script>
+   <script src="./js/shop.js"></script>
 
 
 </body>

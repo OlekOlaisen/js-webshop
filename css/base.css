@@ -4,11 +4,11 @@ html {
 
 body {
 	background-color: var(--background);
-	
+
 }
 
 h1 {
-	color: var(--forground);
+	color: var(--foreground);
 	font-size: var(--font-size-large);
 	font-family: 'Bitter', serif;
 }
