@@ -344,6 +344,7 @@ function renderHTML() {
 }
 
 // Increments amount of items on each id. 
+/* function expression/declaration */
 let increment = (id) => {
    let selectedItem = id;
    let search = cart.find((items) => items.id === selectedItem);
