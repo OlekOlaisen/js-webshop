@@ -255,7 +255,6 @@ const filterToggles = document.querySelectorAll('.filter__toggle');
 I'm aware that onclick functions are not up to wc3 standards, but I couldn't get increment and decrement to work with event listeners.
 */
 
-
 for (const toggle of filterToggles) {
    toggle.addEventListener('click', handleFilterToggleClick);
 }
