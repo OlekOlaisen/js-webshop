@@ -2,8 +2,6 @@ export default function Cart() {
 	let label = document.getElementById('label');
 	let shoppingList = document.getElementById('cart-list');
 
-
-
 	// Gets items from localstorage
 	let cart = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -14,22 +12,20 @@ export default function Cart() {
 
 	calculateNumbers();
 
-
-
-	// Generates items in cart
+	/**
+	 * Generate items in the cart.
+	 * @param {Object[]} id - The id of the object. 
+	 * @param {Object} item - The object
+	 * @returns {string} Either returns the object in HTML or displays empty cart if the cart is empty. 
+	 */
 	let generateCartItems = () => {
-
 		if (cart.length !== 0) {
 			return (shoppingList.innerHTML = cart.map((x) => {
-
-				console.log(x);
-
+				// console.log(x);
 				let { id, item } = x;
-
 				let search = filterObjects.find((item) => item.id == id) || [];
 
-				return `
-				
+				return `			
 				<div class="header__cart-list-item">
 					<img src=${search.image} class="header__cart-list-item-image">
 					<div class="header__cart-list-item-details">
@@ -48,9 +44,6 @@ export default function Cart() {
 						</div>
 					</div>
 				</div>
-
-				
-
 				`
 			}).join(""));
 		}
@@ -67,63 +60,11 @@ export default function Cart() {
 
 	generateCartItems();
 
-	// incrementItemss amount of items on each id. 
-	let incrementItems = (id) => {
-		let selectedItem = id;
-		let search = cart.find((items) => items.id === selectedItem);
-
-		if (search === undefined) {
-			cart.push({
-				id: selectedItem,
-				item: 1,
-			});
-		}
-		else {
-			search.item += 1;
-		}
-
-		generateCartItems();
-		updateItems(selectedItem);
-
-		//  Adding cart to localStorage
-		localStorage.setItem("data", JSON.stringify(cart));
-	};
-
-	// decrementItemss amount of items on each id, stops at 0. 
-	let decrementItems = (id) => {
-		let selectedItem = id;
-		let search = cart.find((items) => items.id === selectedItem);
-
-		if (search === undefined) return
-		else if (search.item === 0) return;
-		else {
-			search.item -= 1;
-		}
-		updateItems(selectedItem);
-		// Removes items with 0 quantity from cart 
-		cart = cart.filter((x) => x.item !== 0);
-		generateCartItems();
-		//  Adding cart to localStorage
-		localStorage.setItem("data", JSON.stringify(cart));
-	};
-
-
-	// updateItemss item__quantity and displays it on it in HTML. 
-	let updateItems = (id) => {
-
-		let search = cart.find((items) => items.id === id)
-		// console.log(search.item);
-		document.getElementById(id).innerHTML = search.item;
-		calculateNumbers();
-	}
-
-	let removeItem = (id) => {
-		let selectedItem = id;
-		cart = cart.filter((x) => x.id !== selectedItem.id);
-		localStorage.setItem("data", JSON.stringify(cart));
-		removeItem();
-	}
-
+	/**
+ * Finds the item and, multiplies it by the item price and displays it in HTML. 
+ * @returns {string} Returns the total amount in HTML.
+ * 
+ */
 	let totalAmount = () => {
 		if (cart.length !== 0) {
 			let amount = cart.map((x) => {
@@ -139,27 +80,21 @@ export default function Cart() {
 					<div class="header__cart-list-total">Total bill: $${amount}</div>
 			</div>
 			`
-
 		} else return;
 	}
 
 	totalAmount();
 
 
-	// SHOW/HIDE Accordion
+
 
 	let cartListVisible = false;
 
-	// query selectors
 	const cartList = document.querySelector('.header__cart-accordion');
 	const accordionButton = document.querySelector('.header__cart-icon');
 
-
-	// event listeners
 	accordionButton.addEventListener('click', handleAccordionButtonClick);
 
-
-	// event handlers
 	function handleAccordionButtonClick(event) {
 		toggleAccordionList();
 		renderAccordionList();
@@ -169,7 +104,7 @@ export default function Cart() {
 		cartListVisible = !cartListVisible;
 	}
 
-	// render
+
 	function renderAccordionList() {
 		if (cartListVisible === true) {
 			cartList.classList.add('header__cart-accordion--visible');

@@ -265,6 +265,11 @@ function handleFilterToggleClick(event) {
 
 }
 
+/**
+ * An event that checks if currentFilter is equal to filter or not. 
+ * @param {any} filter - Filter
+ * @returns 
+ */
 function toggleFilter(filter) {
    if (currentFilter === filter) {
       currentFilter = null;
@@ -274,6 +279,11 @@ function toggleFilter(filter) {
    }
 }
 
+/**
+ * Decides if filtered or unfiltered items should be returned.
+ * @param {string} item - The object
+ * @returns {string} Either returns filterObjects or filterObjects filtered by category. 
+ */
 function returnFilteredItems() {
    if (currentFilter === null) {
       return filterObjects;
@@ -286,11 +296,12 @@ function returnFilteredItems() {
 renderHTML();
 
 
-
+/**
+ * Renders HTML. 
+ * @param {string} item - The object
+ */
 function renderHTML() {
    filterContent.innerHTML = '';
-
-
 
    for (const toggle of filterToggles) {
       toggle.classList.remove('filter__toggle--active');
@@ -329,8 +340,12 @@ function renderHTML() {
    }
 }
 
-// incrementItemss amount of items on each id. 
-/* function expression/declaration */
+/**
+ * Searches the item and selects the id. If the search returns undefined, it will only have one instance of the object, else it will increment the item.
+ * @param {string} id - The id of the object. 
+ * @param {string} items - The object
+ * 
+ */
 let incrementItems = (id) => {
    let selectedItem = id;
    let search = cart.find((items) => items.id === selectedItem);
@@ -351,7 +366,14 @@ let incrementItems = (id) => {
    localStorage.setItem("data", JSON.stringify(cart));
 };
 
-// decrementItemss amount of items on each id, stops at 0. 
+// decrementItemss amount of items on each id, stops at 0.
+
+/**
+ * Searches the item and selects the id. If the search returns undefined or 0, it decrements the item, but not past 0.
+ * @param {Object[]} id - The id of the object. 
+ * @param {Object} items - The object
+ * @returns {string} item - Decrements the item
+ */
 let decrementItems = (id) => {
    let selectedItem = id;
    let search = cart.find((items) => items.id === selectedItem);
@@ -372,7 +394,12 @@ let decrementItems = (id) => {
 };
 
 
-// updateItemss item__quantity and displays it on it in HTML. 
+/**
+ * Searches each items, updates items and displays it in HTML. 
+ * @param {Object[]} id - The id of the object. 
+ * @param {Object} items - The object
+ * 
+ */
 let updateItems = (id) => {
 
    let search = cart.find((items) => items.id === id)
@@ -381,7 +408,11 @@ let updateItems = (id) => {
    calculateNumbers();
 }
 
-//  Calculates all the numbers and displays it on shopping cart icon, only runs when updateItems function is triggered
+/**
+ * Calculates all the numbers and displays it on shopping cart icon, only runs when updateItems function is triggered. 
+ * 
+ * 
+ */
 let calculateNumbers = () => {
    let cartIcon = document.getElementById('cartQuantity')
    cartIcon.innerHTML = cart.map((x) => x.item).reduce((x, y) => x + y, 0)

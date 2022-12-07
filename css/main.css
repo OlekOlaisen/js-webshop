@@ -11,8 +11,7 @@
 /**********MODULE STYLES**********/
 @import './modules/home.css';
 @import './modules/header.css';
-@import './modules/filterNav.css';
-@import './modules/main-grid.css';
-@import './modules/filterItems.css';
-@import './modules/search-input.css';
+@import './modules/filter-toggle.css';
+@import './modules/shop.css';
+@import './modules/items.css';
 @import './modules/cart.css';
