@@ -1,4 +1,4 @@
-
+/* Took inspiration from this tutorial for the shop page: https://www.youtube.com/watch?v=cT_ZYrS3tKc */
 
 const filterObjects = [
    {
@@ -246,14 +246,12 @@ const filterObjects = [
 
 // Gets items from localstorage
 let cart = JSON.parse(localStorage.getItem("data")) || [];
-let currentFilter = null;
 
+let currentFilter = null;
 
 const filterContent = document.querySelector('.product__filter-content');
 const filterToggles = document.querySelectorAll('.filter__toggle');
-/* 
-I'm aware that onclick functions are not up to wc3 standards, but I couldn't get increment and decrement to work with event listeners.
-*/
+
 
 for (const toggle of filterToggles) {
    toggle.addEventListener('click', handleFilterToggleClick);
@@ -262,7 +260,6 @@ for (const toggle of filterToggles) {
 function handleFilterToggleClick(event) {
    toggleFilter(event.target.dataset.filter);
    renderHTML();
-
 }
 
 /**
@@ -297,7 +294,7 @@ renderHTML();
 
 
 /**
- * Renders HTML. 
+ * Renders the HTML. 
  * @param {string} item - The object
  */
 function renderHTML() {
@@ -317,7 +314,9 @@ function renderHTML() {
       let { id, name, category, image, price, label } = item;
       let search = cart.find((item) => item.id == id) || [];
 
-
+      /* 
+      I'm aware that onclick functions are not up to wc3 standards, but I couldn't get increment and decrement to work with event listeners.
+      */
       filterItem.dataset.category = item.category;
       filterItem.innerHTML = `
       
@@ -329,6 +328,7 @@ function renderHTML() {
                <div class="item__category">${category}</div>
                <div class="item__price">$${price}</div>
                <div class="item__amount">
+               
                   <i onclick="decrementItems(${id})" id="item__decrementItems" class="bi bi-dash"></i>
                   <div id=${id} class="item__quantity">${search.item === undefined ? 0 : search.item}</div>
                   <i onclick="incrementItems(${id})" id="item__incrementItems" class="bi bi-plus"></i>
