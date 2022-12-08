@@ -45,3 +45,95 @@ li {
 	font-weight: 500;
 	align-content: center;
 }
+
+#header__navigation-burger-menu {
+	display: none;
+	color: white;
+}
+
+
+/******DESKTOP MEDIUM/LARGE******/
+
+
+
+#header__navigation-burger-menu {
+	display: none;
+}
+
+.filter {
+	display: flex;
+}
+
+/******DESKTOP SMALL******/
+@media screen and (max-width: 1200px) {
+
+
+	#header__navigation-burger-menu {
+		display: none;
+	}
+
+
+}
+
+/******TABLET******/
+@media screen and (max-width: 992px) {
+
+
+	#header__navigation-burger-menu {
+		display: block;
+
+	}
+
+
+
+	.header__navigation-link {
+		display: none;
+	}
+
+	.header__navigation-link--visible {
+		display: flex;
+		flex-flow: column;
+		margin-top: 1rem;
+		background: var(--foreground);
+		position: absolute;
+		height: 300px;
+		width: 100vw;
+		top: 2.7rem;
+		left: 0;
+	}
+}
+
+/******MOBILE******/
+@media screen and (max-width: 768px) {
+
+	body {
+		position: relative;
+	}
+
+	#header__navigation-burger-menu {
+		display: block;
+
+	}
+
+	.header__navigation-link {
+		display: none;
+	}
+
+	.header__navigation-link--visible {
+		display: flex;
+		flex-flow: column;
+		margin-top: 1rem;
+		background: var(--foreground);
+		position: absolute;
+		height: 300px;
+		width: 100vw;
+		top: 2.7rem;
+		left: 0;
+	}
+
+	ul {
+		display: none;
+	}
+
+
+}
