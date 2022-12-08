@@ -78,6 +78,7 @@ export default function Cart() {
 			<div class="header__cart-list-options">
 					<div class="header__cart-list-options-x"></div>
 					<div class="header__cart-list-total">Total bill: $${amount}</div>
+					<button class="header__cart-list-button">Checkout</button>
 			</div>
 			`
 		} else return;

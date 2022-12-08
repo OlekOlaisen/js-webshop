@@ -37,3 +37,7 @@
 	transform: translateX(-50%);
 	border-radius: 1rem;
 }
+
+.main__section-hero-link:hover {
+	background-color: var(--foreground-hover);
+}

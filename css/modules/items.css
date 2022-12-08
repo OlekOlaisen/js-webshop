@@ -19,7 +19,7 @@
    font-weight: 600;
    font-size: 1.2rem;
    transition: ease 200ms;
-
+   color: var(--foreground-hover);
 }
 
 .item__label {
